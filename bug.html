@@ -1,0 +1,8 @@
+This error occurs when using Tailwind's `@apply` directive with a utility class that doesn't exist or is misspelled.  For example:
+
+```html
+<div class="bg-blue-500 @apply text-red-700 text-typo">
+</div>
+```
+
+If `text-typo` isn't defined in your Tailwind configuration, you'll get a warning or error (depending on your Tailwind setup and build process).  It might manifest as a missing style, unexpected rendering, or a build failure.
