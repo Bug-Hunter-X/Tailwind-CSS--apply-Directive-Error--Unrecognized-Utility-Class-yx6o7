@@ -1,0 +1,30 @@
+The solution involves verifying that the utility class `text-typo` is correctly defined in your `tailwind.config.js` (or the equivalent configuration file). If it's not defined, add it to your configuration file and ensure that Tailwind's CSS is up-to-date.  The corrected HTML will be like this:
+
+```html
+<div class="bg-blue-500 text-red-700">
+</div>
+```
+
+Or, if you define a custom utility class in `tailwind.config.js`:
+
+```javascript
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      typography: {
+        typo: {
+          fontSize: '1.2rem',
+          fontWeight: 'bold',
+          color: '#333',
+        },
+      }
+    }
+  }
+}
+```
+
+```html
+<div class="bg-blue-500 @apply text-red-700 typography-typo">
+</div>
+```
